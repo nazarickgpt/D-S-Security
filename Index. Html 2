@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&S Security Specialists</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #001f3f;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .building-placeholder {
+            background-color: #666;
+            height: 200px;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+            display: block;
+        }
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #007BFF;
+            border-radius: 50%;
+        }
+        .section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about {
+            background-color: #f9f9f9;
+        }
+        .about h2 {
+            text-align: center;
+            color: #001f3f;
+            font-size: 36px;
+        }
+        .about p {
+            font-size: 16px;
+            text-align: justify;
+        }
+        .services {
+            background-color: #e9e9e9;
+        }
+        .services h2 {
+            text-align: center;
+            color: #001f3f;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        .service-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .service-item h3 {
+            color: #001f3f;
+            margin-bottom: 10px;
+        }
+        .contact {
+            background-color: #001f3f;
+            color: white;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            width: 100%;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+        footer {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .contact {
+                grid-template-columns: 1fr 1fr;
+            }
+            .hero h1 {
+                font-size: 48px;
+            }
+            .building-placeholder {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .building-placeholder {
+                height: 150px;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact {
+                grid-template-columns: 1fr;
+            }
+            .contact h2 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 30px 10px;
+            }
+            .section {
+                padding: 20px 10px;
+            }
+            .about h2, .services h2 {
+                font-size: 28px;
+            }
+            .service-item {
+                padding: 15px;
+            }
+            .contact-info {
+                gap: 15px;
+            }
+            input, textarea, button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">D&S Security Specialists</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Home Security Specialists.</h1>
+        <p>Welcome to D&S Security Specialists, providing professional security services in Durban, KwaZulu-Natal, South Africa.</p>
+        <div class="building-placeholder"></div>
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot active"></div>
+            <div class="dot"></div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <h2>About Us</h2>
+        <p>D&S Security Specialists is a leading provider of year-round security solutions, leveraging our high standards of the industry. Our Durban-based company offers bespoke services through trained, compliant personnel and the layering of elite client services.</p>
+        <p>Your single point of contact ensures seamless operations. We comply fully with your supporting services. Personnel are trained and licensed to meet South African regulations, security services on hand with total integrity to your needs.</p>
+        <p>Then develop a compelling supporting service: personal touch. Our sale starts with South African regulations, security services on hand and reliable safeguarding services for your personal local partners, to vital safety information.</p>
+        <p>Company Description: Name: D&S Security Specialists (Pty) Ltd. Directors: Ndumiso Praysworth Zama (ID/certificates held), Nkonzo Dlamini (ID/certificates held). Legal structure: Private company (Pty) limited liability. Location: Based in Durban, KwaZulu-Natal, South Africa. Mission: To provide reliable, professional security services that protect lives and assets, build trust and deliver peace of mind to clients. Vision: To become the preferred security partner in the KwaZulu-Natal region, known for compliance, high-standards and tailored solutions. Values: Integrity, responsiveness, professionalism, client-focus, continuous improvement.</p>
+        <p>Compliance & Regulatory Readiness: Company registered with the Companies and Intellectual Property Commission (CIPC). Registration with PSiRA as required for security service providers. Directors hold necessary certificates (as per your provided doc scans). Tax registration (SARS), UIF, COIDA where applicable. Insurances: Public liability insurance, professional indemnity, worker compensation. Policies: Staff training and vetting, incident-reporting, control procedures.</p>
+    </section>
+
+    <section id="services" class="section services">
+        <h2>Services</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Your services services offerings live at what blighter on the security services</p>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Armed & Unarmed Guarding</h3>
+                <p>Armed and unarmed patrols of premises</p>
+            </div>
+            <div class="service-item">
+                <h3>CCTV Monitoring</h3>
+                <p>24/7 guarding and monitoring</p>
+            </div>
+            <div class="service-item">
+                <h3>Mobile Patrols</h3>
+                <p>Access working and mobile patrols</p>
+            </div>
+            <div class="service-item">
+                <h3>Access Control</h3>
+                <p>Access control bill systems</p>
+            </div>
+            <div class="service-item">
+                <h3>Armed Patrols</h3>
+                <p>Armed patrols for money</p>
+            </div>
+            <div class="service-item">
+                <h3>Approvals</h3>
+                <p>Approvals on site training</p>
+            </div>
+            <div class="service-item">
+                <h3>Access Control Systems</h3>
+                <p>Access control built systems</p>
+            </div>
+            <div class="service-item">
+                <h3>Remote Monitoring</h3>
+                <p>Remote monitoring regulations</p>
+            </div>
+            <div class="service-item">
+                <h3>Armed Response & Alarms</h3>
+                <p>Armed response and alarms</p>
+            </div>
+        </div>
+        <div class="dots" style="justify-content: center; margin-top: 20px;">
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <p style="text-align: center; margin-top: 10px;">Services Offered: Static guarding of premises (commercial, residential estates). Mobile patrol & response services. Access control and gatehouse operations. Risk assessment & security consulting. Event security (crowd control, access). Optional future expansion: CCTV/monitoring, electronic access systems. Each service will be backed by trained licensed personnel, compliant with the regulatory regime in South Africa.</p>
+        <p>Market Analysis: Industry context: The security services sector in South Africa is strictly regulated under the Private Security Industry Regulatory Authority (PSiRA) and has growing demand due to asset-protection needs and crime-concerns. Target market segments: Commercial clients: retail outlets, small offices, warehouses. Residential estates and sectional titles in Durban/KZN. Events: corporate gatherings, functions needing security staffing. Competitive landscape: Established players exist; differentiation will be through tailored local service, responsiveness, and competitive pricing. SWOT: Strengths: Directors’ certifications, local focus, compliance-ready. Weaknesses: New entrant; less brand recognition. Opportunities: Growing demand; niche markets (estate security, event security). Threats: Strong incumbents; regulatory/insurance risk; staff turnover.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <div>
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Physical Address: 123 Security Street, Durban, KwaZulu-Natal, South Africa.</span>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>091 356-9023</span>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>091 342-023</span>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <span>info@dssecurity.co.za</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Contact Form</h2>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Subject">
+                <textarea rows="5" placeholder="Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 D&S Security Specialists. All rights reserved.</p>
+    </footer>
+</body>
+</html>
