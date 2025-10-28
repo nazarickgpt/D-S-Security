@@ -1,157 +1,222 @@
-Index <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D&S Security Specialists</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #005599;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 1200px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #003366;
-        }
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .contact-form button {
-            background-color: #005599;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #003366;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ndumiso Praysworth Zama | AI & Web Creator</title>
+  <meta name="description" content="Ndumiso Praysworth Zama — Self-taught Web & App Developer, AI research enthusiast and systems designer based in Durban, South Africa. Explore projects, books and contact information." />
+  <link rel="canonical" href="https://nazarickgpt.github.io/D-S-Security/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ndumiso Praysworth Zama | AI & Web Creator" />
+  <meta property="og:description" content="Self-taught Web & App Developer, AI research enthusiast and systems designer based in Durban, South Africa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nazarickgpt.github.io/D-S-Security/" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ndumiso Praysworth Zama | AI & Web Creator" />
+  <meta name="twitter:description" content="Self-taught Web & App Developer, AI research enthusiast and systems designer based in Durban, South Africa." />
+
+  <!-- Structured Data (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ndumiso Praysworth Zama",
+    "jobTitle": "Web & App Developer, AI Research Enthusiast",
+    "url": "https://nazarickgpt.github.io/D-S-Security/",
+    "sameAs": [
+      "https://www.linkedin.com/in/ndumiso-zama-026a35b6"
+    ],
+    "email": "mailto:ndumisonpn@gmail.com",
+    "telephone": "+27653670112"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg: #0f1116;
+      --panel: #1a1c23;
+      --accent: #00b4d8;
+      --accent-600: #0096c7;
+      --text: #eaeef2;
+      --muted: #a6aab3;
+      --radius: 10px;
+      --max-width: 900px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root{
+        --bg: #f6f7fb;
+        --panel: #ffffff;
+        --accent: #0077b6;
+        --accent-600: #005f88;
+        --text: #111319;
+        --muted: #475569;
+      }
+    }
+
+    html,body{height:100%;}
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      color: var(--text);
+      background-color: var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    a {color: var(--accent);}    
+a.btn {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 18px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-right: 10px;
+      display: inline-block;
+      transition: background .15s ease;
+    }
+    a.btn:hover, a.btn:focus {background: var(--accent-600); outline: none;}
+    header, section, footer {padding: 48px 20px; max-width: var(--max-width); margin: auto;}
+    h1, h2 {color: var(--accent); margin:0 0 10px 0;}
+    h1 {font-size:2.25rem;}
+    h2 {margin-top: 48px; border-bottom: 2px solid var(--accent); padding-bottom: 6px;}
+    p {margin: 0 0 12px 0;}
+    .btn:focus {box-shadow:0 0 0 3px rgba(0,180,216,0.18);}
+
+    /* layout */
+    .project-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;}
+    .project {background: var(--panel); padding: 20px; border-radius: var(--radius); box-shadow: 0 2px 8px rgba(0,0,0,0.25);}
+    .skills-list {list-style: none; padding: 0; margin: 0;}
+    .skills-list li {background: var(--panel); margin: 8px 0; padding: 10px; border-radius: 8px;}
+    .contact-info {list-style: none; padding: 0; margin: 0;}
+    .contact-info li {margin-bottom: 8px; color:var(--muted);}    
+    footer {text-align: center; font-size: 0.9rem; color: var(--muted); padding-bottom: 80px;}
+
+    /* skip link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 8px;
+      background: #000;
+      color: #fff;
+      padding: 8px 12px;
+      z-index: 100;
+      border-radius: 6px;
+      transition: top .15s ease;
+    }
+    .skip-link:focus {top: 8px; outline: none;}
+
+    /* small screens */
+    @media (max-width: 520px){
+      header, section, footer {padding-left: 16px; padding-right: 16px;}
+      h1 {font-size: 1.6rem;}
+    }
+  </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <header>
-        <h1>D&S Security Specialists (Pty) Ltd</h1>
-        <p>Providing reliable security services in KwaZulu-Natal, South Africa</p>
-    </header>
+  <header id="hero" role="banner" aria-labelledby="name-title">
+    <h1 id="name-title">Ndumiso Praysworth Zama</h1>
+    <p>Self‑Taught Web &amp; App Developer • AI Research Enthusiast • Builder of Intelligent Systems</p>
+    <p>
+      <a class="btn" href="#projects">Explore My Work</a>
+      <a class="btn" href="#books">Read My Books</a>
+    </p>
+  </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="home">
-        <h2>Welcome to D&S Security Specialists</h2>
-        <p>We are a compliant South African security-services provider offering guarding, patrol, access-control, and specialist services to commercial and residential clients in KwaZulu-Natal and surrounding areas.</p>
-        <p>Our mission is to provide reliable, professional security services that protect lives and assets, build trust, and deliver peace of mind to clients.</p>
-        <p>Our vision is to become the preferred security partner in the KwaZulu-Natal region, known for compliance, high-standards, and tailored solutions.</p>
-        <p>Values: Integrity, responsiveness, professionalism, client-focus, continuous improvement.</p>
+  <main id="main-content" tabindex="-1" role="main">
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>I’m Ndumiso, based in Durban, South Africa. Currently working at Maxhosa Africa (Oceans Mall) as a Sales Assistant, I’ve led teams, managed operations, and always kept one eye on technology. Over time I taught myself to build websites, apps, and started exploring how artificial intelligence systems work. My journey goes beyond retail: I want to design systems where humans and machines collaborate meaningfully.</p>
+      <p>My background includes roles as Assistant Manager at All Good Things (2021‑2024), Floor Supervisor at Vodacom (2019‑2021), and Supervisor at GCO Cellular (2016‑2018). I hold a Project Management Certificate (Great Learning Academy) and an NCV Level 3 Certificate in Electrical Engineering (Elangeni TVET). My interests include AI &amp; tech research, coding, writing, and system design.</p>
     </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>D&S Security Specialists is based in Durban, KwaZulu-Natal, South Africa. Directed by Nkonzo Dlamini and Ndumiso Zama , both holding certified qualifications .</p>
-        <p>We are registered with the Companies and Intellectual Property Commission (CIPC) and the Private Security Industry Regulatory Authority (PSiRA). We ensure full compliance with South African regulations, including tax registration (SARS), UIF, COIDA, and necessary insurances.</p>
-        <h3>Our Unique Selling Proposition</h3>
-        <p>We differentiate by combining local management in Durban/KZN, directors with certified credentials, a strong commitment to training and responsiveness, and personalised service rather than “one-size-fits-all”. This focus on client-specific needs and ongoing improvement helps us outperform generic providers.</p>
-        <h3>SWOT Analysis</h3>
-        <ul>
-            <li><strong>Strengths:</strong> Directors’ certifications, local focus, compliance-ready.</li>
-            <li><strong>Weaknesses:</strong> New entrant; less brand recognition.</li>
-            <li><strong>Opportunities:</strong> Growing demand; niche markets (estate security, event security).</li>
-            <li><strong>Threats:</strong> Strong incumbents; regulatory/insurance risk; staff turnover.</li>
-        </ul>
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Selected Projects</h2>
+      <div class="project-grid" role="list">
+        <article class="project" role="listitem" aria-labelledby="proj1">
+          <h3 id="proj1">AI/Website Framework (Nazriel / NazarickGPT Concept)</h3>
+          <p>Developed a recursive intelligence framework (self‑initiated) to explore AI reasoning, system logic and automation.</p>
+          <p><a href="https://nazarickgpt.github.io/D-S-Security/" target="_blank" rel="noopener noreferrer">View Project</a></p>
+        </article>
+
+        <article class="project" role="listitem" aria-labelledby="proj2">
+          <h3 id="proj2">D&amp;S Security Website</h3>
+          <p>Built a full website for a security business: brand identity, responsive site, GitHub Pages deployment.</p>
+          <p><a href="https://nazarickgpt.github.io/D-S-Security/" target="_blank" rel="noopener noreferrer">View Website</a></p>
+        </article>
+
+        <article class="project" role="listitem" aria-labelledby="proj3">
+          <h3 id="proj3">Web/App Development (Various Self‑Projects)</h3>
+          <p>Created web and mobile prototypes using HTML/CSS/JavaScript, integrating user feedback and iterative design.</p>
+          <p><a href="#" rel="noopener noreferrer">View Demos</a></p>
+        </article>
+      </div>
     </section>
 
-    <section id="services">
-        <h2>Services Offered</h2>
-        <p>Each service is backed by trained licensed personnel, compliant with the regulatory regime in South Africa.</p>
-        <ul>
-            <li>Static guarding of premises (commercial, residential estates)</li>
-            <li>Mobile patrol & response services</li>
-            <li>Access control and gatehouse operations</li>
-            <li>Risk assessment & security consulting</li>
-            <li>Event security (crowd control, access)</li>
-            <li>Optional future expansion: CCTV/monitoring, electronic access systems</li>
-        </ul>
-        <p>Target market segments include commercial clients (retail outlets, small offices, warehouses), residential estates and sectional titles in Durban/KZN, and events (corporate gatherings, functions).</p>
+    <section id="books" aria-labelledby="books-heading">
+      <h2 id="books-heading">Books &amp; Writing</h2>
+      <p>I’ve authored books and notes exploring systems, AI, human behaviour and digital design. Browse or download selected works.</p>
+      <ul>
+        <li><strong>Title 1</strong> – Short description of book… <a href="#">Download/Preview</a></li>
+        <li><strong>Title 2</strong> – Short description of notes… <a href="#">Download/Preview</a></li>
+      </ul>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>For inquiries, please reach out to us. We emphasize 24/7 responsiveness, local management, and staff training.</p>
-        <div class="contact-form">
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="text" name="subject" placeholder="Subject" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-        <p>Location: Durban, KwaZulu-Natal, South Africa</p>
-        <p>Email: info@dssecurity.co.za (placeholder)</p>
-        <p>Phone: +27 XXX XXX XXXX (placeholder)</p>
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills &amp; Tools</h2>
+      <ul class="skills-list">
+        <li>Web &amp; App Development (HTML, CSS, JavaScript)</li>
+        <li>AI &amp; Research: Framework Design, Prompt Engineering, Systems Thinking</li>
+        <li>Project Management: Agile &amp; Scrum</li>
+        <li>Leadership &amp; Operations: Team Building, Financial Reporting, Customer Experience</li>
+        <li>Digital Marketing &amp; Brand Strategy</li>
+      </ul>
     </section>
 
-    <footer>
-        <p>&copy; 2025 D&S Security Specialists (Pty) Ltd. All rights reserved.</p>
-    </footer>
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Let’s Build Something</h2>
+      <p>If you’re working at the intersection of creativity and intelligence, I’d love to connect.</p>
 
+      <ul class="contact-info" aria-label="contact information">
+        <li>Email: <a href="mailto:ndumisonpn@gmail.com">ndumisonpn@gmail.com</a></li>
+        <li>Phone: <a href="tel:+27653670112">+27 65 367 0112</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/ndumiso-zama-026a35b6" target="_blank" rel="noopener noreferrer">linkedin.com/in/ndumiso-zama‑026a35b6</a></li>
+        <li>Address: 30 Hazelwood Grove, Woodview, Durban 4068, South Africa</li>
+      </ul>
+
+      <!--
+        Optional contact form (requires backend or form provider).
+        To enable with Formspree:
+          1) Replace action="#" with your Formspree endpoint (e.g. action="https://formspree.io/f/xxxxx")
+          2) Remove the commented lines below.
+      -->
+      <!--
+      <form action="#" method="post" style="margin-top:16px; max-width:560px; display:grid; gap:8px;">
+        <label>
+          <span class="sr-only">Name</span>
+          <input name="name" placeholder="Your name" required style="padding:8px;border-radius:6px;border:1px solid #ccc;">
+        </label>
+        <label>
+          <span class="sr-only">Email</span>
+          <input name="email" type="email" placeholder="Your email" required style="padding:8px;border-radius:6px;border:1px solid #ccc;">
+        </label>
+        <label>
+          <span class="sr-only">Message</span>
+          <textarea name="message" rows="4" placeholder="Message" required style="padding:8px;border-radius:6px;border:1px solid #ccc;"></textarea>
+        </label>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+      -->
+
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2025 Ndumiso Praysworth Zama. All rights reserved.</p>
+  </footer>
 </body>
-  </html>
-  Add site
+</html>
